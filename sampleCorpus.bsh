@@ -1,0 +1,26 @@
+
+
+if [ ! -d "sample" ]; then
+	mkdir sample
+fi
+
+if [ ! -d "sampleResults" ]; then
+	mkdir sampleResults
+fi
+
+if [ ! -d "sampleKeys" ]; then
+    mkdir sampleResults
+fi
+
+
+
+for j in `seq 1 100`; do
+	shuf -n 10000 allSpeechs.txt >sample/speechSample.txt
+	bin/mallet import-dir --input ~/workspace/topicModelling/sample --output sample.mallet --keep-sequence --remove-stopwords
+
+	#for i in `seq 10 50`; do
+	for i in {10..100..10}; do
+		bin/mallet train-topics --input sample.mallet --num-topics $i --output-topic-keys sampleKeys/sampleKeys_${i}_${j}.csv --output-doc-topics sampleResults/sampleState_${i}_${j}.csv
+	done
+
+done
