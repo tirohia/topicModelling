@@ -2,7 +2,7 @@ import os as os
 import re
 import csv
 
-path="/home/ben/Dropbox/TPM Research Bootcamp/raw-data-deleted/"
+path="/home/ben/Dropbox/TPM Research Bootcamp/speech-data/"
 
 
 def group_items(lst):
@@ -34,8 +34,8 @@ for mp in mpList:
                 num_words += len(words)
 
          
-        #if(num_words<100):
-        #    os.remove(path + mp + "/" + mpFile)
+        if(num_words<100):
+            os.remove(path + mp + "/" + mpFile)
         #    print (path + mp + "/" + mpFile)
         writer.writerow([ mpFile] + [num_words])
 
