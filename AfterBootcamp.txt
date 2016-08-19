@@ -6,3 +6,4 @@ TO DO AFTER BOOTCAMP
 -rerun MALLET and resulting output through code for topic time-series
 -redraw networks and degree distributions
 -Update methods
+-Tables of example topics
