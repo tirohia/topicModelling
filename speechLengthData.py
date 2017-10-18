@@ -1,3 +1,6 @@
+# compiles information regarding speech length, removes all speeches with less that 100 words. 
+# less than was used in the final analysis. 
+
 import os as os
 import re
 import csv

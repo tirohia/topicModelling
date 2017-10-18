@@ -1,0 +1,9 @@
+TO DO AFTER BOOTCAMP
+
+-Concat speechs by MP and year after removal of low-word count speechs
+-run MALLET 
+-add formalities to stoplist
+-rerun MALLET and resulting output through code for topic time-series
+-redraw networks and degree distributions
+-Update methods
+-Tables of example topics
